@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastro de Paciente</title>
+</head>
+	<body>
+	
+		<h2>Cadastro de Paciente - Clínica Odontológica</h2>
+		
+		<form 	action="PacienteGravarCadastro.php"
+				method="post"
+				enctype="multipart/form-data">
+		<hr>
+
+		<fieldset>
+		
+                    Cpf:
+					<input 	
+					type="text"
+					name="cpf"
+					maxlength="15"
+					size="25"
+					required
+					placeholder="Digite seu CPF"> 
+                    <br><br>
+                    
+                    Nome:
+					<input 	
+					type="text"
+					name="nome"
+					maxlength="100"
+					size="25"
+					placeholder="Pedro"
+                    required> <br><br>
+
+
+					Rg:
+					<input 	
+					type="text"
+					name="rg"
+					maxlength="9"
+					size="16"
+					required
+					placeholder="Digite seu RG"> 
+					<br><br>				
+
+
+                    Data de nascimento:
+				    <input	
+					type="date"
+					name="dataNasc"
+					min="1910-01-31"
+					max="2020-12-31"
+                    required> <br><br>
+
+
+                    Data de cadastro:
+				    <input	
+					type="date"
+					name="dataCad"
+					min="1910-01-31"
+					max="2020-12-31"
+                    required> <br><br>
+
+
+                    E-mail:
+					<input 	
+					type="email"
+					name="email"
+					maxlength="100"
+					size="60"
+					placeholder="exemplo@exemplo.com"
+                    required> <br><br>
+                    
+
+					E-mail (Confirmação):
+					<input 	
+					type="email"
+					name="email1"
+					maxlength="100"
+					size="60"
+					placeholder="exemplo@exemplo.com"
+					required> <br><br>
+					
+                    Telefone: 
+					<input 
+					type="tel"
+					name="telefone" 
+					pattern="[0-9]{2}[0-9]{5}[0-9]{4}"
+					required
+					maxlength="11"
+					size="11"
+					placeholder="11912345678"
+					required><span>Formato: 11912345678</span>
+                    <br><br>
+                    
+                    Cep:
+					<input 	
+					type="text"
+					name="cep"
+					maxlength="9" 
+					size="9"
+					placeholder="01000100"
+                    required> <br><br>
+                    
+            
+                    
+                    Endereço:
+					<input 	
+					type="text"
+					name="endereco"
+					maxlength="60"
+					size="60"
+					placeholder="Rua nove de julho"
+                    required> <br><br>
+                    
+
+                    Número:
+					<input 	
+					type="text"
+					name="numeroCasa"
+					maxlength="10"
+					size="10"
+					placeholder="123"
+                    required> <br><br>
+                
+
+                    Bairro:
+					<input 	
+					type="text"
+					name="bairro"
+					maxlength="35"
+					size="40"
+					placeholder="Digite o bairro"
+					required> <br><br>
+
+
+
+                    Cidade:
+					<input 	
+					type="text"
+					name="cidade"
+					maxlength="100"
+					size="25"
+					placeholder="Mogi das Cruzes"
+                    required> <br><br>
+
+
+                    Uf:
+			        <input 
+					type="text" name="uf"
+					id="id" maxlength="2"
+					list="listaUf"
+					required
+					size="2"> <br><br>
+			
+			<datalist id="listaUf">
+				<option value="AC">
+				<option value="AL">
+				<option value="AM">
+				<option value="AP">
+				<option value="BA">
+				<option value="CE">
+				<option value="DF">
+				<option value="ES">
+				<option value="GO">
+				<option value="MA">
+				<option value="MG">
+				<option value="MS">
+				<option value="MT">
+				<option value="PA">
+				<option value="PB">
+				<option value="PE">
+				<option value="PI">
+				<option value="PR">
+				<option value="RJ">
+				<option value="RN">
+				<option value="RO">
+				<option value="RR">
+				<option value="RS">
+				<option value="SC">
+				<option value="SE">
+				<option value="SP">
+				<option value="TO">
+            </datalist>
+
+
+            
+            Observações:<br>
+            <textarea name="obs" id="obs"
+            rows="5" cols="80" maxlength="150" required
+            placeholder="Digite aqui suas observações
+            limite de 150 caracteres"></textarea>
+            <br><br>
+                    
+
+                    Nome Responsável:
+					<input 	
+					type="text"
+					name="nomeResponsavel"
+					maxlength="100"
+					size="6"
+					placeholder="Bloco C"
+                    > <br><br>
+                    
+
+                    Telefone Responsável: 
+					<input 
+					type="tel"
+					name="telefoneResponsavel" 
+					pattern="[0-9]{2}[0-9]{5}[0-9]{4}"
+					required
+					maxlength="11"
+					size="11"
+					placeholder="11912345678"
+					><span>Formato: 11912345678</span>
+                    <br><br>
+                    
+                    
+                    Gênero:
+					<input 	type="radio" name="genero" id="generoM" value="M">Masculino &nbsp;
+					<input 	type="radio" name="genero" id="generoF" value="F">Feminino &nbsp;
+					<br><br>
+					
+					
+					
+					<input type="submit" name="btnCadLogin" value="Enviar">
+				
+					<input type="reset" value="Limpar Dados">
+										
+		       </fieldset>		
+		</form>
+		<hr>
+		<a href="PacienteListagemCadastro.php"><button>Listagem de Cadastros</button></a>
+		<a href="../login/logout.php"><button>Sair</button></a>
+		<hr>
+	</body>
+</html>
